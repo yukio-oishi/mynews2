@@ -39,13 +39,14 @@
                             <div class="form-group row">
                                 <label class="col-md-2">性別</label>
                                 <div class="col-md-10">
-                                    <input type="text" class="form-control" name="getrnder">
+                                    <input type="radio" class="radio" name="gender" value="male">男性
+                                    <input type="radio" class="radio" name="gender" value="female">女性
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-md-2">趣味</label>
                                 <div class="col-md-10">
-                                    <input type="text" class="form-control-file" name="hobby">
+                                    <input type="text" class="form-control" name="hobby">
                                 </div>
                             </div>
                             <div class="form-group row">
