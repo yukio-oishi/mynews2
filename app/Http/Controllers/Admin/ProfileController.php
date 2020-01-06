@@ -7,6 +7,10 @@ use App\Http\Controllers\Controller;
 
 use App\Profile;
 
+use App\Update;
+
+use Carbon\carbon;
+
 class ProfileController extends Controller
 {
   public function add()
@@ -51,6 +55,12 @@ class ProfileController extends Controller
     
     // 該当するデータを上書き保存する
     $profile->fill($profile_form)->save();
+    
+    // 更新履歴
+    $update = new Update;
+    $update->profile_id = $profile->id;
+    $update->edited_at = Carbon::now();
+    $update->save();
     
       return redirect('admin/profile');
   }

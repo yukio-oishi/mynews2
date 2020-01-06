@@ -45,6 +45,19 @@
                         </div>
                     </div>
                 </form>
+                {{-- 以下を追記 --}}
+                <div class="row mt-5">
+                    <div class="col-md-4 mx-auto">
+                        <h2>更新履歴</h2>
+                        <ul class="list-group">
+                            @if ($profile_form->updates != NULL)
+                                @foreach ($profile_form->updates as $update)
+                                    <li class="list-group-item">{{ $profile->edited_at }}</li>
+                                @endforeach
+                            @endif
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
