@@ -1,40 +1,57 @@
 body {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #000;
-    color: #fff;
+    color: #000;
 }
 
-.navbar-laravel {
-    background-color: #000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+.header {
+  .logo {
+      width: 120px;
+      height: 82px;
+  }
 }
 
-.navbar-brand {
-    color: #fff !important;
+.headline {
+  .caption {
+    position: relative;
+    width: 350px;
+    .image {
+        img {
+     width: 100%;
+       }
+     }
+     .title {
+       width: 100%;
+       position: absolute;
+       bottom: 0;
+       left: 0;
+       background-color: rgba(0, 0, 0, 0.6);
+       h1 {
+     color: #fff;
+     font-size: 1.2em;
+       }
+     }
+     .body {
+       font-size: 0.8em;
+     }
+  }
 }
 
-.nav-link {
-    color: #fff !important;
-}
-
-.table-dark {
-    color: #fff;
-}
-
-.list-group-item {
-    border-color: #fff;
-    background-color: #000;
-}
-
-.login-box {
-    background-color: rgba(0, 0, 0, 0);
-}
-
-.login-header {
-    background-color: rgba(0, 0, 0, 0.25);
-}
-
-.login-body {
-    background-color: rgba(0, 0, 0, 0.25);
+.posts {
+  .post {
+    .date {
+      font-size: 0.6em;
+      color: #999999;
+    }
+    .title {
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+    .body {
+      font-size: 0.8em;
+    }
+    .image {
+      img {
+    width: 250px;
+      }
+    }
+  }
 }
