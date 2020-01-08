@@ -23,8 +23,7 @@
                     <div class="form-group row">
                         <label class="col-md-2" for="gender">性別</label>
                         <div class="col-md-10">
-                            <input type="radio" class="radio" name="gender" value="male">男性
-                            <input type="radio" class="radio" name="gender" value="female">女性
+                            <input type="text" class="form-control" name="gender" value="{{ $profile_form->gender }}">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -52,7 +51,7 @@
                         <ul class="list-group">
                             @if ($profile_form->updates != NULL)
                                 @foreach ($profile_form->updates as $update)
-                                    <li class="list-group-item">{{ $profile->edited_at }}</li>
+                                    <li class="list-group-item">{{ $update->edited_at }}</li>
                                 @endforeach
                             @endif
                         </ul>
