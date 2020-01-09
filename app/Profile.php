@@ -18,6 +18,6 @@ class Profile extends Model
         
         public function updates()
         {
-            return $this->hasMany('App\Update');
+            return $this->hasmany('App\Update');
         }
 }

@@ -9,7 +9,7 @@ use App\Profile;
 
 use App\Update;
 
-use Carbon\carbon;
+use Carbon\Carbon;
 
 class ProfileController extends Controller
 {
