@@ -5178,12 +5178,12 @@ input[type=button].btn-block {
 }
 
 .navbar-dark .navbar-brand {
-  color: #fff;
+  color: #000;
 }
 
 .navbar-dark .navbar-brand:hover,
 .navbar-dark .navbar-brand:focus {
-  color: #000;
+  color: #c0c0c0;
 }
 
 .navbar-dark .navbar-nav .nav-link {
