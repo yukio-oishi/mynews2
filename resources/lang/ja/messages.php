@@ -5,6 +5,10 @@ return [
     'E-Mail Address' => 'メールアドレス',
     'Password' => 'パスワード',
     'Remember Me' => 'ログイン情報を記憶する',
+    'NewRegister' => '新規登録',
+    'Register' => '登録',
+    'Name' => '名前',
+    'Confirm Password' => 'パスワード再確認',
     ];
 
 ?>
