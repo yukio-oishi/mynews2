@@ -24,9 +24,13 @@ class NewsController extends Controller
         $news = new News;
         $form = $request->all();
         
+        // s3アップロード開始
+        $form['image'] = $request->file('image');
         // フォームから画像が送信されてきたら、保存して、$news->image_path に画像のパスを保存する
         if ($form['image']) {
-          $path = Storage::disk('s3')->putFile('/',$form['image'],'public');
+        // バケットの`yukio1`フォルダへアップロード
+          $path = Storage::disk('s3')->putFile('yukio1',$form['image'],'public');
+        // アップロードした画像のフルパスを取得
           $news->image_path = Storage::disk('s3')->url($path);
         } else {
             $news->image_path = null;
@@ -81,7 +85,7 @@ class NewsController extends Controller
             $news_form['image_path'] = null;
         } elseif ($request->file('image')) {
           $path = Storage::disk('s3')->putFile('/',$news_form['image'],'public');
-          $news_form['image_path'] = basename($path);
+          $news->image_path = Storage::disk('s3')->url($path);
         } else {
           $news_form['image_path'] = $news->image_path;
         }
